@@ -12,13 +12,26 @@ import com.infy.db.dbeSIT.model.entity.AppENTITYi;
 
 public class DBESITUtil {
 
+	//Program Status 
 	public static final String RETURN_DEF = "DEFAULT_NULL";
 	public static final String STATUS_OK = "OK";
 	public static final String STATUS_ERROR = "ERROR";
 	
+	//Functional
 	public static final String DBE_POLICY_EDITOR = "POLICY_EDITOR";
 	public static final String DBE_POLICY_APPROVER = "POLICY_APPROVER";
 
+	//Env
+	public static final String DBE_ENV_UAT = "UAT";
+	public static final String DBE_ENV_PROD = "PROD";
+	public static final String DBE_EMAIL_SYSTEM = "dbe.system@db.com";
+
+	//Interface Msg
+	public static final String DBE_MSG_TYPE_CONFIG_NAR = "CONFIG_NAR";
+	public static final String DBE_MSG_TYPE_STATUS_INFO = "STATUS_INFO";
+	
+	public static final String DBE_ACT_CONFIG_NAR = "ACT_CONFIG_NAR";
+	
 	private static final ObjectMapper mapper = new ObjectMapper();
 	
 	public static String ListToString(List<String> myList) {

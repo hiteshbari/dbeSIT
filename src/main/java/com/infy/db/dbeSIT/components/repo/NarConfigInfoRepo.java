@@ -7,7 +7,7 @@ import com.infy.db.dbeSIT.model.entity.NarConfigInfo;
 
 public interface NarConfigInfoRepo extends JpaRepository<NarConfigInfo, Integer>{
 
-	@Query(value = "SELECT SELECT COUNT(*)"
+	@Query(value = "SELECT COUNT(*)"
 			+ " FROM tr_narconfiginfo"
 			+ " WHERE narId = :narId", nativeQuery = true)
 	public int isNarExist(String narId);

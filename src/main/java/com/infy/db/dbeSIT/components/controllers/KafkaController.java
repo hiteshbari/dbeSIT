@@ -22,7 +22,8 @@ public class KafkaController {
 	
 	@PostMapping(value = "/startSITTopic", produces = "application/json")
 	public ResponseEntity<String> startSITTopic(@RequestParam("topicName") String topicName){
-		kafkaService.startSITTopic(topicName);
+		
+		kafkaService.startTopic(topicName);
 		return new ResponseEntity<String>("DONE", HttpStatus.CREATED);
 	}
 }

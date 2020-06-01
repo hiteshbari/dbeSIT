@@ -23,10 +23,10 @@ public class KafkaServiceImpl implements KafkaService {
 	private ObjectMapper mapper = new ObjectMapper();
 	
 	@Override
-	public String startSITTopic(String sitTopic) {
+	public String startTopic(String topic) {
 		String rtn = DBESITUtil.RETURN_DEF;
 		KafkaConsumer<String, String> kafkaConsumer = KafkaConsumerImpl.getNEWKafkaConsumer("myConsumerSIT");
-		kafkaConsumer.subscribe(Arrays.asList(sitTopic));
+		kafkaConsumer.subscribe(Arrays.asList(topic));
 		final int NoOfTries = 5;
 		int RecordsCount = 0;
 		kafkaConsumer.poll(0); // Initiate the consumer
